@@ -1,16 +1,17 @@
-# {{ project_name }}
+# djSkell
 
 ## Getting Started
 
-Make sure you are using a virtual environment of some sort (e.g. `virtualenv` or
-`pyenv`).
+1. Go to https://www.thecodeship.com/deployment/deploy-django-apache-virtualenv-and-mod_wsgi/ and follow the top portion of the page to create a virtual env for your project.
+2. Make necessary changes to /skellsite/wsgi.py
+3. Make necessary changes to apache/yourdomain.com.conf and copy it to /etc/apache2/sites-enabled and do
 
 ```
-npm install
+sudo apachectl graceful
+```
+
+4. Install dependencies
+
+``` 
 pip install -r requirements.txt
-./manage.py migrate
-./manage.py loaddata sites
-npm run dev
 ```
-
-Browse to http://localhost:3000/
